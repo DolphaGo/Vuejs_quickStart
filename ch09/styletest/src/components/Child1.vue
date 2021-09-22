@@ -26,8 +26,6 @@ export default {
 }
 
 .test{
-  padding: 10px;
-  text-decoration: underline;
-  border: solid 1px black;
+  background-color: blue;
 }
 </style>

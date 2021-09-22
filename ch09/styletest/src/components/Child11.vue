@@ -6,6 +6,6 @@
 
 <style scoped>
 .test {
-  font-style: italic;
+  background-color: red;
 }
 </style>
