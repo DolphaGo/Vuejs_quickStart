@@ -7,10 +7,10 @@
 </template>
 
 <script>
-import eventBus from "@/EventBus";
+import Constant from "@/Constant";
 
 export default {
-  name: "InputTodo",
+  name: "input-todo",
   data: function () {
     return {
       todo: ""
@@ -18,19 +18,25 @@ export default {
   },
   methods: {
     addTodo() {
-      eventBus.$emit('add-todo', this.todo);
-      this.todo = "";
+      this.$store.commit(Constant.ADD_TODO, {todo: this.todo})
+      this.todo = ""
     }
   }
 }
 </script>
 
 <style scoped>
-* {  box-sizing: border-box;  }
+* {
+  box-sizing: border-box;
+}
 
 .input {
-  border: none; width: 75%; height:35px; padding: 10px;
-  float: left; font-size: 16px;
+  border: none;
+  width: 75%;
+  height: 35px;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
 }
 
 .addbutton {
